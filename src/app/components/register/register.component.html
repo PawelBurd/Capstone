@@ -1,0 +1,68 @@
+<form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+        <div>
+            <h1>Registration</h1>
+
+            <label> Username
+                <input type="text" formControlName="username">
+            </label>
+            
+            <label> First Name
+                <input type="text" formControlName="fname">
+            </label>
+            
+            <label> Last Name
+                <input type="text" formControlName="lname">
+            </label>
+            
+            <label> Password
+                <input type="text" formControlName="password">
+            </label>
+
+            <label> Confirm Password
+                <input type="text" formControlName="confirmpassword">
+            </label>
+            
+            <label> Security Question
+                <select class="form-control" name="security">
+                    <option [value]="0">What is the name of your Favourite Teacher?</option>
+                    <option [value]="1">What is the name of your first School?</option>
+                    <option [value]="2">What is the name of your first pet?</option>
+                    <option [value]="3">What is your Mother's maiden name?</option>
+                    <option [value]="4">What is your favourite movie?</option>
+                </select>
+            </label>
+
+            <label> Answer
+                <input type="text" formControlName="answer">
+            </label>            
+
+            <label> Date of Birth
+                <input type="date" formControlName="birthday">
+            </label>
+
+            <div class="container">
+                <h3>Interests </h3>
+                
+                <label for="drawing"> Drawing </label>
+                <input type="checkbox" name="drawing" formControlName="drawing" value="1">
+                
+                <label for="movies"> Movies </label>
+                <input type="checkbox" name="movies" formControlName="movies" value="1">
+                
+                <label for="music"> Music </label>
+                <input type="checkbox" name="music" formControlName="music" value="1">
+                
+                <label for="programming"> Promgramming </label>
+                <input type="checkbox" name="programming" formControlName="programming" value="1">
+
+                <label for="writing"> Writing </label>
+                <input type="checkbox" name="writing" formControlName="writing" value="1">
+                
+
+            </div>
+
+            <input type="submit" class="button expanded" value="Submit">
+        </div>
+    </div>
+</form>
